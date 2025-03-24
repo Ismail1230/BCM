@@ -23,8 +23,6 @@ AS
                 UPPER(S.SUPPLIER_NAME) AS SUPPLIER_NAME,
                 TO_CHAR(SUM(OM.ORDER_TOTAL_AMOUNT), '999,999,999.00') AS ORDER_TOTAL_AMOUNT,
                 OM.ORDER_STATUS,
-                I.INVOICE_REF, 
-                TO_CHAR(SUM(I.INVOICE_AMOUNT), '999,999,999.00') AS TOTAL_INVOICE_AMOUNT,
                 RANK() OVER (ORDER BY SUM(OM.ORDER_TOTAL_AMOUNT) DESC) AS rank
             FROM 
                 ORDER_MAIN OM
@@ -41,15 +39,13 @@ AS
                 OM.ORDER_REF,  
                 OM.ORDER_DATE,
                 S.SUPPLIER_NAME,
-                OM.ORDER_STATUS,
-                I.INVOICE_REF 
+                OM.ORDER_STATUS
         ) IQ
         WHERE IQ.rank = 2
         GROUP BY IQ.ORDER_REF_NUM, IQ.ORDER_PERIOD, IQ.SUPPLIER_NAME, IQ.ORDER_TOTAL_AMOUNT, IQ.ORDER_STATUS, IQ.ORDER_REF;
 
 BEGIN
     FOR report_record IN report_cursor_highest LOOP
-        
         DBMS_OUTPUT.PUT_LINE('Order Ref: ' || report_record.ORDER_REFERENCE);
         DBMS_OUTPUT.PUT_LINE('Order Date: ' || report_record.ORDER_DATE);
         DBMS_OUTPUT.PUT_LINE('Supplier: ' || report_record.SUPPLIER_NAME);
