@@ -1,0 +1,18 @@
+Order Ref: 1, Supplier: Pegasus Ltd, Order Total:       60,000.00, Action: OK
+Order Ref: 2, Supplier: Mottoway Corp., Order Total:    2,250,000.00, Action: To follow up
+Order Ref: 3, Supplier: Digisay Co. Ltd., Order Total:      229,200.00, Action: OK
+Order Ref: 4, Supplier: Lamboni Stat Inc., Order Total:       20,400.00, Action: To verify
+Order Ref: 5, Supplier: Emtello Ltd, Order Total:       84,000.00, Action: To follow up
+Order Ref: 6, Supplier: Stuffie Stationery, Order Total:    1,500,000.00, Action: OK
+Order Ref: 8, Supplier: Jinfix Computers, Order Total:      426,000.00, Action: OK
+Order Ref: 9, Supplier: Fireland Bros., Order Total:       36,800.00, Action: OK
+Order Ref: 10, Supplier: Foxy Electronics, Order Total:      913,500.00, Action: OK
+Order Ref: 11, Supplier: Lamboni Stat Inc., Order Total:       86,400.00, Action: OK
+Order Ref: 12, Supplier: Pegasus Ltd, Order Total:    2,385,000.00, Action: OK
+Order Ref: 13, Supplier: Mottoway Corp., Order Total:   23,278,500.00, Action: OK
+Order Ref: 7, Supplier: Safedest Taxi Services, Order Total:      106,800.00, Action: To verify
+Order Ref: 14, Supplier: Digisay Co. Ltd., Order Total:    7,202,160.00, Action: To follow up
+
+
+PL/SQL procedure successfully completed.
+
